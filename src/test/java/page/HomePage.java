@@ -9,10 +9,11 @@ import org.openqa.selenium.support.PageFactory;
 public class HomePage {
 	
 	public WebDriver driver;
-	
+	//constructor
 	public HomePage(){
 		PageFactory.initElements(driver, this);
 	}
+	//Identify all my WebElements using @FindBy anontation
 	@FindBy(how = How.XPATH, using="//input[@id='vehicleReg']")
 	 public static WebElement EnterRegBtn;
 	
@@ -36,7 +37,7 @@ public class HomePage {
 	@FindBy(how = How.CSS, using="#page-container > div.result")
 	public static WebElement Sorry_record_not_foundTxt;
 	
-	
+	//create methods to perform actions on WebElements 
 	public void click_Find_Vehicle(){
 		FindVehicleLink.click();
 	}

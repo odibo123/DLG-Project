@@ -18,7 +18,7 @@ import page.HomePage;
 
 public class VehicleStepDefinition{
 	
-	public WebDriver driver;
+	public WebDriver driver;     //initialize WebDriver globally
 	@Given("^I am on the HomePage$")
 	public void i_am_on_the_HomePage() throws Throwable {
 		System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");	
@@ -31,7 +31,7 @@ public class VehicleStepDefinition{
 	@Given("^I validate my HomePage title$")
 	public void i_validate_my_HomePage_title() throws Throwable {
 	  String title =  driver.getTitle();
-	  System.out.println("The title of HomePage is "+ title);
+	  System.out.println("The title of HomePage is "+ title);  //print Page title
 	  Assert.assertEquals("Dealer Portal", title);
 	}
 
@@ -39,6 +39,7 @@ public class VehicleStepDefinition{
 	public void i_enter_my_valid_registration_number() throws Throwable {
 		HomePage homePage= PageFactory.initElements(driver, HomePage.class);
 		homePage.type_into_EnterRegBtn();
+		//HomePage.
 	}
 
 	@When("^I click on the Find vehicle input box$")

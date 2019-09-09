@@ -8,7 +8,7 @@ Feature: DLG Registration test
     Then I should see  a result of my registration details
     
     
- Scenario: To test that a user should get an error message when he inputs invalid data
+ Scenario: To test that a user should get an error message when  invalid data is inputed
     Given I am on the HomePage
     And I validate my HomePage title
     And I enter Invalid data in the enter reg input text box
